@@ -1,26 +1,41 @@
-# SbabFrontend
+# SBAB
+
+Caspar Sylwan 
+Instrutions to run the application – SBAB Code test
+
+
+Frontend  code can be found here: https://github.com/casparsylwan/sbab-frontend
+\
+Backend code  can be found here: https://github.com/casparsylwan/SBAB
+\
+\
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+\
+To be able to  run the Frontend, you have to download Angular CLI through Node.js and then run the command:
 
-## Development server
+ npm install -g @angular/cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To bypass web browse security CORS, the Frontend has to be run with config file and therefore run the following command after cloning down the projet: 
 
-## Code scaffolding
+ng serve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Frontend runs on localhost:4200
+
+To be able to run the Backend, it is required to register an account and get an API key from: 
+https://www.trafiklab.se/
+https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2. 
+
+
+Backend
+This project can be run by Java 11 or higher, and it is a spring boot maven project.  
+The key should be placed in the application properties after api.key-value. 
+The backend runs on localhost:8080
+
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
