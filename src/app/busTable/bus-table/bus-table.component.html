@@ -1,0 +1,30 @@
+<app-bus-stop-table
+    *ngIf="busLine"
+    [busLine]="busLine"
+    (busLineEmitter)="clearBusLine()"
+></app-bus-stop-table>
+<div 
+   *ngIf="!busLine"    
+    class="container">
+    <h2> Busslinjer sorterat på antlal hålplatser </h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Busslinje</div>
+        <div class="col col-2"></div>
+        <div class="col col-3">Antal</div>
+        <div class="col col-4"></div>
+      </li>
+      <li 
+        *ngFor="let bus of busLines"
+        class="table-row">
+        <div class="col col-1" >{{bus.LineNumber}}</div>
+        <div class="col col-2" ></div>
+        <div class="col col-3" >{{bus.numberOfStops}}</div>
+        <div class="col col-4" >
+            <button 
+                (click)="getStopsNames(bus.LineNumber)"
+                class="btn" > VISA </button>
+        </div>
+      </li>
+    </ul>
+  </div>
